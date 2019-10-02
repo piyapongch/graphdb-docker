@@ -15,19 +15,23 @@ You will need docker and make installed on your machine.
 1. Checkout this repository
 1. Register on the Ontotext website for the GraphDB Free edition. Download the zip file and place it in the *free-edition* subdirectory
 1. Run
-```
+```shell
 make free VERSION=<the-version-that-you-got>
 ```
 
 for example the most recent version as of this writing is 9.0.0 so run
-```
+```shell
 make free VERSION=9.0.0
 ```
 
 this will build an image that you can use called pcharoen/graphdb:9.0.0-free.
 You can run the image now with
+```shell
+docker run -d -p 7200:7200 --name graphdb pcharoen/graphdb:9.0.0-free
 ```
-docker run -d -p 7200:7200 pcharoen/graphdb:9.0.0-free
+You can stop the image with
+```shell
+docker stop $(docker ps -a -q --filter name=graphdb)
 ```
 
 Consult the docker hub documentation for more information.
@@ -54,12 +58,12 @@ thing.
 
 The following command should be able to build you a custom image that takes your local changes into account
 
-```
+```shell
 make ee VERSION=<version-of-graphdb-you-want>
 ```
 for the enterprise edition and
 
-```
+```shell
 make se VERSION=<version-of-graphdb-you-want>
 ```
 
