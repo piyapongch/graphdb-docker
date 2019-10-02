@@ -33,6 +33,14 @@ You can stop the image with
 ```shell
 docker stop $(docker ps -a -q --filter name=graphdb)
 ```
+You can restart the image with
+```shell
+docker start $(docker ps -a -q --filter name=graphdb)
+```
+You can remove the image with
+```shell
+docker rm $(docker ps -a -q --filter name=graphdb)
+```
 
 Consult the docker hub documentation for more information.
 
