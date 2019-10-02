@@ -19,15 +19,15 @@ You will need docker and make installed on your machine.
 make free VERSION=<the-version-that-you-got>
 ```
 
-for example the most recent version as of this writing is 8.8.1 so run
+for example the most recent version as of this writing is 9.0.0 so run
 ```
-make free VERSION=8.8.1
+make free VERSION=9.0.0
 ```
 
-this will build an image that you can use called ontotext/graphdb:8.8.1-free.
+this will build an image that you can use called pcharoen/graphdb:9.0.0-free.
 You can run the image now with
 ```
-docker run -d -p 7200:7200 graphdb-free
+docker run -d -p 7200:7200 pcharoen/graphdb:9.0.0-free
 ```
 
 Consult the docker hub documentation for more information.
