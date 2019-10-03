@@ -10,9 +10,9 @@ on our website.
 
 # Building a docker image based on the free edition
 
-You will need docker and make installed on your machine.
+You will need docker, docker-compose and make installed on your machine.
 
-1. Checkout this repository
+1. Checkout this repository and change diriectory to your local repository
 1. Register on the Ontotext website for the GraphDB Free edition. Download the zip file and place it in the *free-edition* subdirectory
 1. Run
 ```shell
@@ -25,21 +25,25 @@ make free VERSION=9.0.0
 ```
 
 this will build an image that you can use called pcharoen/graphdb:9.0.0-free.
-You can run the image now with
+Create import directory on your machine
 ```shell
-docker run -d -p 7200:7200 --name graphdb pcharoen/graphdb:9.0.0-free
+mkdir -p /opt/graphdb/home/import
 ```
-You can stop the image with
+You will need docker-compose to run the image.
 ```shell
-docker stop $(docker ps -a -q --filter name=graphdb)
+docker-compose up -d
 ```
-You can restart the image with
+You can stop the container with
 ```shell
-docker start $(docker ps -a -q --filter name=graphdb)
+docker-compose stop
 ```
-You can remove the image with
+You can restart the container with
 ```shell
-docker rm $(docker ps -a -q --filter name=graphdb)
+docker-compose start
+```
+You can remove the container with
+```shell
+docker-compose down
 ```
 
 Consult the docker hub documentation for more information.

@@ -20,7 +20,7 @@ RUN mkdir -p ${GRAPHDB_PARENT_DIR} && \
 
 ENV PATH=${GRAPHDB_INSTALL_DIR}/bin:$PATH
 
-CMD ["-Dgraphdb.home=/opt/graphdb/home"]
+CMD ["-Dgraphdb.home=/opt/graphdb/home", "-Dgraphdb.workbench.importDirectory=/opt/graphdb/home/import"]
 
 ENTRYPOINT ["/opt/graphdb/dist/bin/graphdb"]
 
