@@ -1,0 +1,8 @@
+{
+  "id": "fedora",
+  "location": "",
+  "params": {},
+  "sesameType": "graphdb:FreeSailRepository",
+  "title": "Fedora 4 Triplestore Repository",
+  "type": "free"
+}
