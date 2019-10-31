@@ -1,18 +1,15 @@
 version: '3'
 
 volumes: 
-  data:
-    driver: local
-  web:
+  graphdb:
     driver: local
   
 services:
 
-  web:
+  graphdb:
     image: pcharoen/graphdb:9.0.0-free
     restart: always
     volumes:
-      - data:/opt
-      - "/opt/graphdb/home/import:/opt/graphdb/home/import"
+      - graphdb:/opt
     ports:
       - "7200:7200"
