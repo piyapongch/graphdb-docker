@@ -19,13 +19,12 @@ You will need docker, docker-compose and make installed on your machine.
 make free VERSION=<the-version-that-you-got>
 ```
 
-<<<<<<< HEAD
-for example the most recent version as of this writing is 9.0.0 so run
+for example the most recent version as of this writing is 9.2.0 so run
 ```shell
-make free VERSION=9.0.0
+make free VERSION=9.2.0
 ```
 
-this will build an image that you can use called pcharoen/graphdb:9.0.0-free.
+this will build an image that you can use called pcharoen/graphdb:9.2.0-free.
 Create import directory on your machine
 ```shell
 mkdir -p /opt/graphdb/home/import
@@ -37,15 +36,6 @@ docker-compose up -d
 You can stop the container with
 ```shell
 docker-compose stop
-=======
-for example the most recent version as of this writing is 9.1.1 so run
-```
-make free VERSION=9.1.1
-```
-
-this will build an image that you can use called ontotext/graphdb:9.1.1-free.
-You can run the image now with
->>>>>>> upstream/master
 ```
 You can restart the container with
 ```shell
