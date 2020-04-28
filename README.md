@@ -2,7 +2,7 @@ This keeps the infrastructure that builds docker images for [GraphDB](http://gra
 
 Check [Docker Hub Images](https://hub.docker.com/r/ontotext/graphdb/) for information on how to use the images.
 
-Note that to use the docker images, you must get a license from us first.
+Note that to use GraphDB EE or SE docker images, you must get a license from us first.
 
 Currently there are no public images for GraphDB Free and you will have to
 build those if needed from the zip distribution that you get after registering
@@ -19,6 +19,7 @@ You will need docker, docker-compose and make installed on your machine.
 make free VERSION=<the-version-that-you-got>
 ```
 
+<<<<<<< HEAD
 for example the most recent version as of this writing is 9.0.0 so run
 ```shell
 make free VERSION=9.0.0
@@ -36,6 +37,15 @@ docker-compose up -d
 You can stop the container with
 ```shell
 docker-compose stop
+=======
+for example the most recent version as of this writing is 9.1.1 so run
+```
+make free VERSION=9.1.1
+```
+
+this will build an image that you can use called ontotext/graphdb:9.1.1-free.
+You can run the image now with
+>>>>>>> upstream/master
 ```
 You can restart the container with
 ```shell
@@ -79,4 +89,4 @@ for the enterprise edition and
 make se VERSION=<version-of-graphdb-you-want>
 ```
 
-for the standard edition
+for the standard edition.
